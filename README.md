@@ -10,8 +10,9 @@ The object is built this way :
 ```python
 tree = NcbiTaxonomyTree(nodes_filename="./nodes.dmp", names_filename="./names.dmp")
 ```
- 
-then we can access to the names, ranks, parents and children of any nodes :
+
+As of July 2015 (the files nodes.dmp and names.dmp are respectively 85 mb and 108 mb), this object takes about 14 seconds to be built and takes 480 mb in RAM.
+Then we can access to the names, ranks, parents and children of any nodes :
 
 ```python
 >>> tree.getName([28384, 131567])

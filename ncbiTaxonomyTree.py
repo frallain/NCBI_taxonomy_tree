@@ -1,7 +1,7 @@
 #!/bin/env python2.7
 # encoding: utf-8
 # from __future__ import print_function
-from __future__ import division
+
 
 import os
 import sys
@@ -272,7 +272,7 @@ class NcbiTaxonomyTree(object):
             >>> tree.getTaxidsAtRank('superkingdom')
             [2, 2157, 2759, 10239, 12884]
         """ 
-        return [taxid for taxid,node in self.dic.iteritems() if node.rank == rank]
+        return [taxid for taxid,node in self.dic.items() if node.rank == rank]
 
     def preorderTraversal(self, taxid, only_leaves):
         """ Prefix (Preorder) visit of the tree

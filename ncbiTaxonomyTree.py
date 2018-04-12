@@ -85,7 +85,7 @@ class NcbiTaxonomyTree(object):
             root_children = self.dic[1].children
             root_children.remove(1)
             self.dic[1] = self.dic[1]._replace(parent=None,
-                                               hildren=root_children)
+                                               children=root_children)
             log.info("NcbiTaxonomyTree built")
 
     def getParent(self, taxids):
@@ -345,6 +345,7 @@ if __name__ == "__main__":
 
     log.disabled = True
     log.setLevel(logging.DEBUG)
+
     formatter = logging.Formatter(
         '%(asctime)s %(name)-12s %(levelname)-8s '
         '%(module)-8s l.%(lineno)-3d : %(message)s')
